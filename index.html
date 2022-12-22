@@ -1,1 +1,56 @@
-hello
+<!DOCTYPE html>
+<html lang="en">
+
+<meta name="description" content="Collection of machine learnings projects by csakaszamok">
+<meta name="viewport" content="width=device-width">
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="cards.css">
+</head>
+
+<title>Cards</title>
+
+<body>
+
+
+    <template id="my-template">
+        <div class="col s12 m6 l4">
+            <div class="card">
+                <a href="{{link}}" class="card">
+                    <div class="card-image">
+                        <img src="https://source.unsplash.com/400x225/daily?{{image}}" alt="Image 3">
+                    </div>
+                    <div class="card-content" style="padding: 12px 12px">
+                        <h2>{{title}}</h2>
+                        <h3>{{subtitle}}</h3>
+                        <h3>Category: {{category}}</h3>
+                        <p
+                            style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;">
+                            {{description}}</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </template>
+
+    <div class="container">
+        <div class="row">
+
+            <!-- generate template here.. -->
+
+        </div>
+        <script type="module">
+            import Ibh from 'https://cdn.jsdelivr.net/gh/csakaszamok/ibh/dist/ibh-0.1.0.min.js';
+            import { cards } from './cards.js';
+
+            cards.map(card => {
+                let card1 = Ibh.cloneTemplate({ selector: '#my-template', variables: card })
+                document.querySelector(".row").appendChild(card1)
+            })
+        </script>
+
+</body>
+
+</html>
