@@ -1,5 +1,13 @@
 export const cards =
-    [
+    [        
+        {
+            "title": "Objects",
+            "subtitle": "Object detection",
+            "category": "Demo",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.",
+            "image": "objects",
+            "link": "https://csakaszamok.github.io/ml-simple-object-detection/"
+        },        
         {
             "title": "Fungi",
             "subtitle": "Fungi classifier",
